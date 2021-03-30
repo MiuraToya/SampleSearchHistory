@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomViewOwner: NSObject {
+final class CustomViewOwner: NSObject {
     
     var customView: UIView!
     @IBOutlet weak var callegeLabel1: UILabel!
@@ -19,9 +19,9 @@ class CustomViewOwner: NSObject {
         customView = UINib(nibName: "CustomView", bundle: nil).instantiate(withOwner: self, options: nil).first as?  UIView
     }
     
-    func setData(callege1: String, callege2: String, callege3: String) {
-        callegeLabel1.text = callege1
-        callegeLabel2.text = callege2
-        callegeLabel3.text = callege3
+    func setData(history1: String?, history2: String?, history3: String?) {
+        callegeLabel1.text = history1
+        callegeLabel2.text = history2
+        callegeLabel3.text = history3
     }
 }

@@ -68,7 +68,7 @@ final class ViewController: UIViewController {
         customView3.isHidden = true
     }
     
-    @IBAction func search(_ sender: Any) {
+    @IBAction private func search(_ sender: Any) {
         guard let callege = callegeText.text,
               let lesson = lessonText.text,
               let teacher = teacherText.text else { return }
@@ -115,17 +115,23 @@ extension ViewController: UITextFieldDelegate {
         else { return }
         // カスタムビューのラベルに取得したデータを表示させる
         // 大学名の履歴
-        customViewOwner1?.callegeLabel1.text = callegeHistory[safe: 0]?.callege
-        customViewOwner1?.callegeLabel2.text = callegeHistory[safe: 1]?.callege
-        customViewOwner1?.callegeLabel3.text = callegeHistory[safe: 2]?.callege
+        let callege1 = callegeHistory[safe: 0]?.callege
+        let callege2 = callegeHistory[safe: 1]?.callege
+        let callege3 = callegeHistory[safe: 2]?.callege
+        // カスタムビューに履歴表示
+        customViewOwner1?.setData(history1: callege1, history2: callege2, history3: callege3)
         // 講義名の履歴
-        customViewOwner2?.callegeLabel1.text = lessonHistory[safe: 0]?.lesson
-        customViewOwner2?.callegeLabel2.text = lessonHistory[safe: 1]?.lesson
-        customViewOwner2?.callegeLabel3.text = lessonHistory[safe: 2]?.lesson
-        // 教員名
-        customViewOwner3?.callegeLabel1.text = teacherHistory[safe: 0]?.teacher
-        customViewOwner3?.callegeLabel2.text = teacherHistory[safe: 1]?.teacher
-        customViewOwner3?.callegeLabel3.text = teacherHistory[safe: 2]?.teacher
+        let lesson1 = lessonHistory[safe: 0]?.lesson
+        let lesson2 = lessonHistory[safe: 1]?.lesson
+        let lesson3 = lessonHistory[safe: 2]?.lesson
+        // カスタムビューに履歴表示
+        customViewOwner2?.setData(history1: lesson1, history2: lesson2, history3: lesson3)
+        // 教員名の履歴
+        let teacher1 = teacherHistory[safe: 0]?.teacher
+        let teacher2 = teacherHistory[safe: 1]?.teacher
+        let teacher3 = teacherHistory[safe: 2]?.teacher
+        // カスタムビューに表示
+        customViewOwner3?.setData(history1: teacher1, history2: teacher2, history3: teacher3)
         // 場合分け
         switch textField {
         case self.callegeText:
