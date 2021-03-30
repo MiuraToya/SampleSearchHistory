@@ -7,8 +7,6 @@
 
 import Foundation
 
-struct SearchHistory: Codable {
-    var first: String
-    var second: String
-    var third: String
+struct CallegeHistory: Codable {
+    var callege: String
 }

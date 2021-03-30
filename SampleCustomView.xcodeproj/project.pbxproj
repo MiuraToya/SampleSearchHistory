@@ -15,9 +15,11 @@
 		B250D81626124EDA00676850 /* SampleCustomViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D81526124EDA00676850 /* SampleCustomViewTests.swift */; };
 		B250D82126124EDA00676850 /* SampleCustomViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D82026124EDA00676850 /* SampleCustomViewUITests.swift */; };
 		B250D84B2612DE8400676850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8452612DE8400676850 /* ViewController.swift */; };
-		B250D84C2612DE8400676850 /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8472612DE8400676850 /* SearchHistory.swift */; };
+		B250D84C2612DE8400676850 /* CallegeHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8472612DE8400676850 /* CallegeHistory.swift */; };
 		B250D84D2612DE8400676850 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B250D8492612DE8400676850 /* CustomView.xib */; };
 		B250D84E2612DE8400676850 /* CustomViewOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D84A2612DE8400676850 /* CustomViewOwner.swift */; };
+		B250D8562612F01400676850 /* LessonHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8552612F01400676850 /* LessonHistory.swift */; };
+		B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D85D2612F04D00676850 /* TeacherHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +54,11 @@
 		B250D82026124EDA00676850 /* SampleCustomViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomViewUITests.swift; sourceTree = "<group>"; };
 		B250D82226124EDA00676850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B250D8452612DE8400676850 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B250D8472612DE8400676850 /* SearchHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
+		B250D8472612DE8400676850 /* CallegeHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallegeHistory.swift; sourceTree = "<group>"; };
 		B250D8492612DE8400676850 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		B250D84A2612DE8400676850 /* CustomViewOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewOwner.swift; sourceTree = "<group>"; };
+		B250D8552612F01400676850 /* LessonHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHistory.swift; sourceTree = "<group>"; };
+		B250D85D2612F04D00676850 /* TeacherHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +159,9 @@
 		B250D8462612DE8400676850 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B250D8472612DE8400676850 /* SearchHistory.swift */,
+				B250D8472612DE8400676850 /* CallegeHistory.swift */,
+				B250D8552612F01400676850 /* LessonHistory.swift */,
+				B250D85D2612F04D00676850 /* TeacherHistory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B250D8562612F01400676850 /* LessonHistory.swift in Sources */,
 				B250D84B2612DE8400676850 /* ViewController.swift in Sources */,
 				B250D7FF26124ED500676850 /* AppDelegate.swift in Sources */,
-				B250D84C2612DE8400676850 /* SearchHistory.swift in Sources */,
+				B250D84C2612DE8400676850 /* CallegeHistory.swift in Sources */,
+				B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */,
 				B250D84E2612DE8400676850 /* CustomViewOwner.swift in Sources */,
 				B250D80126124ED500676850 /* SceneDelegate.swift in Sources */,
 			);
