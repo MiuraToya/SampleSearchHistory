@@ -13,10 +13,16 @@ final class CustomViewOwner: NSObject {
     @IBOutlet weak var callegeLabel1: UILabel!
     @IBOutlet weak var callegeLabel2: UILabel!
     @IBOutlet weak var callegeLabel3: UILabel!
+    @IBOutlet private weak var buttom1: UIButton!
+    @IBOutlet private weak var buttom2: UIButton!
+    @IBOutlet private weak var buttom3: UIButton!
     
     override init() {
         super.init()
         customView = UINib(nibName: "CustomView", bundle: nil).instantiate(withOwner: self, options: nil).first as?  UIView
+        callegeLabel1.text = ""
+        callegeLabel2.text = ""
+        callegeLabel3.text = ""
     }
     
     func setData(history1: String?, history2: String?, history3: String?) {

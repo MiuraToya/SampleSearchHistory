@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B250D7FF26124ED500676850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D7FE26124ED500676850 /* AppDelegate.swift */; };
-		B250D80126124ED500676850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D80026124ED500676850 /* SceneDelegate.swift */; };
 		B250D80626124ED500676850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B250D80426124ED500676850 /* Main.storyboard */; };
 		B250D80826124ED900676850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B250D80726124ED900676850 /* Assets.xcassets */; };
 		B250D80B26124ED900676850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B250D80926124ED900676850 /* LaunchScreen.storyboard */; };
@@ -20,6 +18,8 @@
 		B250D84E2612DE8400676850 /* CustomViewOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D84A2612DE8400676850 /* CustomViewOwner.swift */; };
 		B250D8562612F01400676850 /* LessonHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8552612F01400676850 /* LessonHistory.swift */; };
 		B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D85D2612F04D00676850 /* TeacherHistory.swift */; };
+		B250D8B62615DA2500676850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8B42615DA2500676850 /* AppDelegate.swift */; };
+		B250D8B72615DA2500676850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8B52615DA2500676850 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		B250D7FB26124ED500676850 /* SampleCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B250D7FE26124ED500676850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B250D80026124ED500676850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B250D80526124ED500676850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B250D80726124ED900676850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B250D80A26124ED900676850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +57,8 @@
 		B250D84A2612DE8400676850 /* CustomViewOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewOwner.swift; sourceTree = "<group>"; };
 		B250D8552612F01400676850 /* LessonHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHistory.swift; sourceTree = "<group>"; };
 		B250D85D2612F04D00676850 /* TeacherHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHistory.swift; sourceTree = "<group>"; };
+		B250D8B42615DA2500676850 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B250D8B52615DA2500676850 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,7 @@
 		B250D7FD26124ED500676850 /* SampleCustomView */ = {
 			isa = PBXGroup;
 			children = (
-				B250D7FE26124ED500676850 /* AppDelegate.swift */,
-				B250D80026124ED500676850 /* SceneDelegate.swift */,
+				B250D8B32615DA2500676850 /* App */,
 				B250D8432612DE8400676850 /* MVC */,
 				B250D80426124ED500676850 /* Main.storyboard */,
 				B250D80726124ED900676850 /* Assets.xcassets */,
@@ -173,6 +172,15 @@
 				B250D84A2612DE8400676850 /* CustomViewOwner.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B250D8B32615DA2500676850 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B250D8B42615DA2500676850 /* AppDelegate.swift */,
+				B250D8B52615DA2500676850 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,13 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B250D8B62615DA2500676850 /* AppDelegate.swift in Sources */,
+				B250D8B72615DA2500676850 /* SceneDelegate.swift in Sources */,
 				B250D8562612F01400676850 /* LessonHistory.swift in Sources */,
 				B250D84B2612DE8400676850 /* ViewController.swift in Sources */,
-				B250D7FF26124ED500676850 /* AppDelegate.swift in Sources */,
 				B250D84C2612DE8400676850 /* CallegeHistory.swift in Sources */,
 				B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */,
 				B250D84E2612DE8400676850 /* CustomViewOwner.swift in Sources */,
-				B250D80126124ED500676850 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

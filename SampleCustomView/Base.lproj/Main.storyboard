@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="callegeText" destination="Cdf-zR-nYI" id="aFe-z0-fM9"/>
                         <outlet property="lessonText" destination="PEI-nJ-Ftw" id="uMg-3W-6Za"/>
+                        <outlet property="searchButton" destination="P8p-Hy-byh" id="lYT-Ix-rxr"/>
                         <outlet property="teacherText" destination="O0A-uJ-Wup" id="xUk-D8-fTF"/>
                     </connections>
                 </viewController>
