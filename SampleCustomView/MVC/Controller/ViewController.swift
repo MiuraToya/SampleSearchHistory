@@ -11,6 +11,7 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var callegeText: UITextField!
     @IBOutlet private weak var lessonText: UITextField!
     @IBOutlet private weak var teacherText: UITextField!
+    @IBOutlet private  weak var searchButton: UIButton!
     // 検索履歴を表示するカスタムビューのオーナー
     private var customViewOwner1: CustomViewOwner?
     private var customViewOwner2: CustomViewOwner?
@@ -53,18 +54,21 @@ final class ViewController: UIViewController {
         teacherText.delegate = self
         
         customView1.topAnchor.constraint(equalTo: callegeText.bottomAnchor).isActive = true
+        customView1.bottomAnchor.constraint(equalTo: lessonText.topAnchor).isActive = true
         customView1.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-        customView1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
+        //customView1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
         customView1.isHidden = true
         
         customView2.topAnchor.constraint(equalTo: lessonText.bottomAnchor).isActive = true
+        customView2.bottomAnchor.constraint(equalTo: teacherText.topAnchor).isActive = true
         customView2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-        customView2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
+       // customView2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
         customView2.isHidden = true
         
         customView3.topAnchor.constraint(equalTo: teacherText.bottomAnchor).isActive = true
+        customView3.bottomAnchor.constraint(equalTo: searchButton.topAnchor).isActive = true
         customView3.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-        customView3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
+       // customView3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
         customView3.isHidden = true
     }
     
