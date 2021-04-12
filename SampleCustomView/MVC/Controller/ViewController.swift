@@ -12,14 +12,10 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var lessonText: UITextField!
     @IBOutlet private weak var teacherText: UITextField!
     @IBOutlet private  weak var searchButton: UIButton!
-    // 検索履歴を表示するカスタムビューのオーナー
-    private var customViewOwner1: CustomViewOwner?
-    private var customViewOwner2: CustomViewOwner?
-    private var customViewOwner3: CustomViewOwner?
-    // 検索履歴を表示するカスタムビュー
-    private var customView1: UIView!
-    private var customView2: UIView!
-    private var customView3: UIView!
+    @IBOutlet weak var testView: TestView!
+    @IBOutlet weak var testView2: TestView!
+    @IBOutlet weak var testView3: TestView!
+
     // 検索履歴を格納する配列
     private var callegeHistroyArray: [CallegeHistory] = []
     private var lessonHistroyArray: [LessonHistory] = []
@@ -27,49 +23,15 @@ final class ViewController: UIViewController {
     
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
-    
-    override func loadView() {
-        super.loadView()
-        customViewOwner1 = CustomViewOwner()
-        customViewOwner2 = CustomViewOwner()
-        customViewOwner3 = CustomViewOwner()
         
-        customView1 = customViewOwner1?.customView
-        customView2 = customViewOwner2?.customView
-        customView3 = customViewOwner3?.customView
-        
-        customView1.translatesAutoresizingMaskIntoConstraints = false
-        customView2.translatesAutoresizingMaskIntoConstraints = false
-        customView3.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(customView1)
-        view.addSubview(customView2)
-        view.addSubview(customView3)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         callegeText.delegate = self
         lessonText.delegate = self
         teacherText.delegate = self
-        
-        customView1.topAnchor.constraint(equalTo: callegeText.bottomAnchor).isActive = true
-        customView1.bottomAnchor.constraint(equalTo: lessonText.topAnchor).isActive = true
-        customView1.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-        //customView1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
-        customView1.isHidden = true
-        
-        customView2.topAnchor.constraint(equalTo: lessonText.bottomAnchor).isActive = true
-        customView2.bottomAnchor.constraint(equalTo: teacherText.topAnchor).isActive = true
-        customView2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-       // customView2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
-        customView2.isHidden = true
-        
-        customView3.topAnchor.constraint(equalTo: teacherText.bottomAnchor).isActive = true
-        customView3.bottomAnchor.constraint(equalTo: searchButton.topAnchor).isActive = true
-        customView3.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120).isActive = true
-       // customView3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120).isActive = true
-        customView3.isHidden = true
+        testView.isHidden = true
+        testView2.isHidden = true
+        testView3.isHidden = true
     }
     
     @IBAction private func search(_ sender: Any) {
@@ -123,27 +85,30 @@ extension ViewController: UITextFieldDelegate {
         let callege2 = callegeHistory[safe: 1]?.callege
         let callege3 = callegeHistory[safe: 2]?.callege
         // カスタムビューに履歴表示
-        customViewOwner1?.setData(history1: callege1, history2: callege2, history3: callege3)
+        testView.setData(history1: callege1, history2: callege2, history3: callege3)
         // 講義名の履歴
         let lesson1 = lessonHistory[safe: 0]?.lesson
         let lesson2 = lessonHistory[safe: 1]?.lesson
         let lesson3 = lessonHistory[safe: 2]?.lesson
         // カスタムビューに履歴表示
-        customViewOwner2?.setData(history1: lesson1, history2: lesson2, history3: lesson3)
+        testView2.setData(history1: lesson1, history2: lesson2, history3: lesson3)
         // 教員名の履歴
         let teacher1 = teacherHistory[safe: 0]?.teacher
         let teacher2 = teacherHistory[safe: 1]?.teacher
         let teacher3 = teacherHistory[safe: 2]?.teacher
         // カスタムビューに表示
-        customViewOwner3?.setData(history1: teacher1, history2: teacher2, history3: teacher3)
+        testView3.setData(history1: teacher1, history2: teacher2, history3: teacher3)
         // 場合分け
         switch textField {
         case self.callegeText:
-            customView1.isHidden = false
+            print("大学名たっぷ")
+            testView.isHidden = false
         case self.lessonText:
-            customView2.isHidden = false
+            print("講義名たっぷ")
+            testView2.isHidden = false
         case self.teacherText:
-            customView3.isHidden = false
+            print("大学名たっぷ")
+            testView3.isHidden = false
         default:
             break
         }
@@ -153,11 +118,11 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
         case self.callegeText:
-            customView1.isHidden = true
+            testView.isHidden = true
         case self.lessonText:
-            customView2.isHidden = true
+            testView2.isHidden = true
         case self.teacherText:
-            customView3.isHidden = true
+            testView3.isHidden = true
         default:
             break
         }

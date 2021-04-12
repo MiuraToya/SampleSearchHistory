@@ -20,6 +20,8 @@
 		B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D85D2612F04D00676850 /* TeacherHistory.swift */; };
 		B250D8B62615DA2500676850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8B42615DA2500676850 /* AppDelegate.swift */; };
 		B250D8B72615DA2500676850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D8B52615DA2500676850 /* SceneDelegate.swift */; };
+		B250D9BD26163B7000676850 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B250D9BC26163B7000676850 /* TestView.swift */; };
+		B250D9C226163BAC00676850 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B250D9C126163BAC00676850 /* TestView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B250D85D2612F04D00676850 /* TeacherHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherHistory.swift; sourceTree = "<group>"; };
 		B250D8B42615DA2500676850 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B250D8B52615DA2500676850 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B250D9BC26163B7000676850 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		B250D9C126163BAC00676850 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 			children = (
 				B250D8492612DE8400676850 /* CustomView.xib */,
 				B250D84A2612DE8400676850 /* CustomViewOwner.swift */,
+				B250D9BC26163B7000676850 /* TestView.swift */,
+				B250D9C126163BAC00676850 /* TestView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				B250D84D2612DE8400676850 /* CustomView.xib in Resources */,
 				B250D80826124ED900676850 /* Assets.xcassets in Resources */,
 				B250D80626124ED500676850 /* Main.storyboard in Resources */,
+				B250D9C226163BAC00676850 /* TestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +325,7 @@
 				B250D8B72615DA2500676850 /* SceneDelegate.swift in Sources */,
 				B250D8562612F01400676850 /* LessonHistory.swift in Sources */,
 				B250D84B2612DE8400676850 /* ViewController.swift in Sources */,
+				B250D9BD26163B7000676850 /* TestView.swift in Sources */,
 				B250D84C2612DE8400676850 /* CallegeHistory.swift in Sources */,
 				B250D85E2612F04D00676850 /* TeacherHistory.swift in Sources */,
 				B250D84E2612DE8400676850 /* CustomViewOwner.swift in Sources */,
